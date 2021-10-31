@@ -13,6 +13,8 @@ module ActiveCampaign
     endpoint :account_contacts
     endpoint :accounts
     endpoint :addresses
+    endpoint :campaign_messages
+    endpoint :campaigns
     endpoint :contacts
     endpoint :contact_tags
     endpoint :deals
