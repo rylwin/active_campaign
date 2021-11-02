@@ -24,6 +24,17 @@ module ActiveCampaign
       end
 
       #
+      # Get a single contact's fieldValues
+      #
+      # @param [Integer] id the id of a contact
+      #
+      # @return [Hash]
+      #
+      def show_contact_field_values(id)
+        get("contacts/#{id}/fieldValues")
+      end
+
+      #
       # Get a single contact
       #
       # @param [Integer] id the id of a contact to show

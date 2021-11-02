@@ -43,6 +43,16 @@ module ActiveCampaign
       end
 
       #
+      # Retrieve a custom field's options
+      #
+      # @param [Integer] id the id of the custom field to show
+      #
+      # @return [Array]
+      def show_field_options(id)
+        get("fields/#{id}/options")
+      end
+
+      #
       # Update a custom field
       #
       # @param [Integer] id the id of the field to update
