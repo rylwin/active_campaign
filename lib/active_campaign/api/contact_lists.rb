@@ -11,7 +11,6 @@ module ActiveCampaign
       #
       # Add a contact to a list
       #
-      # @param [Hash] params create a new webhook with this data
       # @param [String] :list_id the id of the list to add the contact to
       # @param [String] :contact_id the id of the contact to add to list
       # @param [String] :status set to 1 to subscribe the contact to the list, set to 2 to unsubscribe the contact from the list
@@ -26,7 +25,7 @@ module ActiveCampaign
         source_id: nil
       )
         post(
-          'contactLists',
+          "contactLists",
           contactList: {
             list: list_id,
             contact: contact_id,
