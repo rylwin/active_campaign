@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'oj'
+
 module ActiveCampaign
   module Faraday
     module Middleware
@@ -9,8 +11,6 @@ module ActiveCampaign
       # @author Mikael Henriksson <mikael@mhenrixon.com>
       #
       class Request < ::Faraday::Middleware
-        dependency 'oj'
-
         include TransformHash
 
         def initialize(app, headers)

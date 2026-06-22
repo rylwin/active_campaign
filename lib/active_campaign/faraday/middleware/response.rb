@@ -2,6 +2,7 @@
 
 require 'logger'
 require 'faraday/logging/formatter'
+require 'oj'
 
 module ActiveCampaign
   LOGGER = ::Logger.new(STDOUT)
@@ -12,9 +13,7 @@ module ActiveCampaign
       #
       # @author Mikael Henriksson <mikael@mhenrixon.com>
       #
-      class Response < ::Faraday::Response::Middleware
-        dependency 'oj'
-
+      class Response < ::Faraday::Middleware
         include TransformHash
 
         # Override this to modify the environment after the response has finished.
